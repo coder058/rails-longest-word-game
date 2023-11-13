@@ -1,0 +1,10 @@
+<!-- app/views/games/score.html.erb -->
+<p>Your word: <%= @word %></p>
+<% if @included && @english_word %>
+  <p>Congratulations!</p>
+<% elsif @included %>
+  <p>Not an English word</p>
+<% else %>
+  <p>Not in the grid</p>
+<% end %>
+<%= link_to 'New Game', new_path %>

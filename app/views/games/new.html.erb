@@ -1,0 +1,11 @@
+<!-- app/views/games/new.html.erb -->
+<form action="<%= score_path %>" method="post" data-turbo="false">
+
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters.join %>
+
+  <p><%= @letters.join(', ') %></p>
+  
+  <%= text_field_tag :word %>
+  <%= submit_tag "Submit" %>
+</form>
